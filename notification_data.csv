@@ -1,0 +1,16 @@
+email,date_time,messages,notification,message_comparison,notification_comparison
+svsmart2@gmail.com,2023-06-20 22:30:25.397187,1,5,1,1
+svsmart2@gmail.com,2023-06-20 22:48:26.211508,1,5,1,1
+svsmart2@gmail.com,2023-06-20 24:50:05.149094,12,12,1,1
+svsmart3@gmail.com,2023-06-20 22:48:26.211508,1,5,1,1
+svsmart@gmail.com,2023-06-20 22:48:26.211508,1,5,1,1
+svsmart2@gmail.com,2023-06-20 23:55:51.447445,0,0,12,12
+svsmart2@gmail.com,2023-06-20 23:57:07.956321,0,0,0,0
+svsmart2@gmail.com,2023-06-21 00:05:38.349841,0,0,0.0,0.0
+svsmart2@gmail.com,2023-06-21 00:09:54.682540,0,0,0.0,0.0
+svsmart2@gmail.com,2023-06-21 00:11:42.887656,0,0,0.0,0.0
+anup.kewat@gmail.com,2023-06-21 00:12:05.405232,3,1,0.03,0.01
+svsmart2@gmail.com,2023-06-21 00:20:57.832687,1,0,0.01,0.0
+anup.kewat@gmail.com,2023-06-21 00:21:19.617637,3,1,0.0,0.0
+svsmart2@gmail.com,2023-06-21 00:23:58.252588,1,0,0.0,0.0
+svsmart2@gmail.com,2023-06-21 00:26:50.903273,1,0,0.0,0.0
