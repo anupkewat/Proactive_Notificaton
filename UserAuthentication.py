@@ -22,7 +22,7 @@ def add_user_info():
         password = getpass("Enter password: ")
 
         encrypted_password = encrypt_data(encryption_key, password)
-        csv_file_path = "userdata.csv"
+        csv_file_path = "UserData/userdata.csv"
 
         with open(csv_file_path, "a", newline="") as csv_file:
             writer = csv.writer(csv_file)
@@ -62,8 +62,3 @@ def add_user():
     generate_key()
     add_user_info()
 load_dotenv()
-# k =encryption_key = os.getenv("KEY")
-# c =  encrypt_data(k, 'asdasd')
-# print( decrypt_data(k, c))
-# add_user()
-# add_user()

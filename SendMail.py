@@ -13,10 +13,10 @@ def send_proactive_email(notifications, messages, email_recipients):
     # Set the subject and body of the email
     
     subject = 'Proactive Notification - LinkedIn '
-    body = f"YOU HAVE : {notifications} messages and {messages} notificatons THIS IS A SAMPLE MAIL."
+    body = f"""You have : {notifications} messages and {messages} notificatons.
+    """
 
     em = EmailMessage()
-    # import pdb; pdb.set_trace()
 
 
     em['From'] = email_sender
@@ -41,4 +41,3 @@ def send_proactive_email(notifications, messages, email_recipients):
 
 
 load_dotenv()
-# send_proactive_email(1,1,["svsmart2@gmail.com , ak4259@srmist.edu.in"])

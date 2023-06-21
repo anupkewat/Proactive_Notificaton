@@ -3,7 +3,6 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
 from time import sleep
 from selenium.webdriver.chrome.options import Options
-
 # import logging
 
 # Set the logging level to ignore or suppress Selenium errors
@@ -11,8 +10,8 @@ from selenium.webdriver.chrome.options import Options
 
 
 
-# Sign In | LinkedIn
-# LinkedIn: Log In or Sign Up
+
+# Works on : LinkedIn: Log In or Sign Up
 def get_notification_and_messages(email, login_password):
     driver_path = "C:\\Users\\svsma\\OneDrive\\Desktop\\environments\\chromedriver.exe"
     service = Service(driver_path)
@@ -48,21 +47,21 @@ def get_notification_and_messages(email, login_password):
         sleep(10)
     sleep(3)
     try:
-        number_of_notifications = driver.find_element(By.XPATH, '//*[@id="ember13"]/span/span[1]')
-        print("Notification",number_of_notifications.text)
-        notifs= number_of_notifications.text
+        number_of_messages = driver.find_element(By.XPATH, '//*[@id="ember13"]/span/span[1]')
+        print("Messages: ",number_of_messages.text)
+        messages= number_of_messages.text
     except:
-        notifs = 0
-        print("Notification",notifs)
+        messages = 0
+        print("Messages: ",messages)
     try :        
-        number_of_messages = driver.find_element(By.XPATH, '//*[@id="ember12"]/span/span[1]')
-        messages = number_of_messages.text
-        print("Messages",number_of_messages.text)
+        number_of_notification = driver.find_element(By.XPATH, '//*[@id="ember12"]/span/span[1]')
+        notifs = number_of_notification.text
+        print("Notifications: ",number_of_notification.text)
     except :
-        messages = 0 
-        print("Messages",messages)
+        notifs = 0 
+        print("Notifications: ",notifs)
 
     
     driver.quit()
 
-    return notifs, messages
+    return messages, notifs

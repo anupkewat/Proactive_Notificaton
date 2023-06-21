@@ -1,11 +1,11 @@
 import pandas as pd
-from get_notifications_messages import get_notification_and_messages
-from user_logins import decrypt_data, get_key
-from send_mail import send_proactive_email
-from export_data import write_to_csv
+from ScrapeNotificationsMessages import get_notification_and_messages
+from UserAuthentication import decrypt_data, get_key
+from SendMail import send_proactive_email
+from WriteToCSV import write_to_csv
 from datetime import datetime
 import os
-from user_logins import add_user
+from UserAuthentication import add_user
 import time
 def search_for_last(export_file_path , email_id):
         
@@ -28,7 +28,7 @@ def search_for_last(export_file_path , email_id):
     # print(" last msgs, notif : ",number_of_last_messages , number_of_last_notifications)
     return  number_of_last_messages , number_of_last_notifications 
 def get_data():
-    df = pd.read_csv('userdata.csv', header =None)
+    df = pd.read_csv('UserData/userdata.csv', header =None)
     # print()
     df.columns = ['email' , 'pass']
 
@@ -44,8 +44,9 @@ def get_data():
         send_proactive_email(notifications, messages , [email_id])
         current_datetime = datetime.now()
         
-        export_file_path = "notification_data.csv"
+        export_file_path = "ProactiveNotificationData/notification_data.csv"
         if os.path.exists(export_file_path):
+
             file_exists = True
             last_messages,last_notification = search_for_last(export_file_path, email_id)
         

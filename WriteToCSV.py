@@ -12,7 +12,3 @@ def write_to_csv(file_path, data):
             writer.writerow(['email', 'date_time', 'messages','notification','message_comparison','notification_comparison'])  
         writer.writerow(data)
 
-# Example usage
-# csv_file_path = "data.csv"
-# data = ['Value1', 'Value2', 'Value3']
-# write_to_csv(csv_file_path, data)
